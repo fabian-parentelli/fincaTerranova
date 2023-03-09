@@ -1,0 +1,64 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+nav .navRedes {
+  width: 100%;
+  height: 35px;
+  background-color: black;
+}
+nav .navRedes div {
+  width: 11%;
+  height: 100%;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav .navRedes div .navInstagrame {
+  width: 25px;
+  height: 25px;
+  background-image: url(../assets/instagram.png);
+  background-size: contain;
+  transition: 0.3s;
+}
+nav .navRedes div .navInstagrame:hover {
+  background-image: url(../assets/instagram2.png);
+  transform: scale(1.1);
+}
+nav .navRedes div .navFacebook {
+  width: 25px;
+  height: 25px;
+  background-image: url(../assets/facebook.png);
+  background-size: contain;
+  transition: 0.3s;
+}
+nav .navRedes div .navFacebook:hover {
+  background-image: url(../assets/facebook2.png);
+  transform: scale(1.1);
+}
+nav .navRedes div .navYoutube {
+  width: 25px;
+  height: 25px;
+  background-image: url(../assets/youtube.png);
+  background-size: contain;
+  transition: 0.3s;
+}
+nav .navRedes div .navYoutube:hover {
+  background-image: url(../assets/youtube2.png);
+  transform: scale(1.1);
+}
+nav .navRedes div .navTiktok {
+  width: 25px;
+  height: 25px;
+  background-image: url(../assets/tiktok.png);
+  background-size: contain;
+  transition: 0.3s;
+}
+nav .navRedes div .navTiktok:hover {
+  background-image: url(../assets/tiktok2.png);
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */

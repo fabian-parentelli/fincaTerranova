@@ -1,0 +1,181 @@
+nav {
+    // ****** Redes ****** //
+    .navRedes {
+        width: 100%;
+        height: 30px;
+        background-color: black;
+        div {
+            height: 100%;
+            margin-left: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+
+            // instagrame
+            .navInstagrame {
+                width: 20px;
+                height: 20px;
+                background-image: url(../assets/instagram.png);
+                background-size: contain;
+                transition: .3s;
+            }
+            .navInstagrame:hover {
+                background-image: url(../assets/instagram2.png);
+                transform: scale(1.1);
+            }
+
+            //Facebook
+            .navFacebook {
+                width: 20px;
+                height: 20px;
+                background-image: url(../assets/facebook.png);
+                background-size: contain;
+                transition: .3s;
+            }
+            .navFacebook:hover {
+                background-image: url(../assets/facebook2.png);
+                transform: scale(1.1);
+            }
+
+            // YouTube
+            .navYoutube {
+                width: 20px;
+                height: 20px;
+                background-image: url(../assets/youtube.png);
+                background-size: contain;
+                transition: .3s;
+            }
+            .navYoutube:hover {
+                background-image: url(../assets/youtube2.png);
+                transform: scale(1.1);
+            }
+
+            // Tiktok
+            .navTiktok {
+                width: 20px;
+                height: 20px;
+                background-image: url(../assets/tiktok.png);
+                background-size: contain;
+                transition: .3s;
+            }
+            .navTiktok:hover {
+                background-image: url(../assets/tiktok2.png);
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    // ****** Navegador ****** //
+    .navegador {
+        width: 100%;
+        height: 90px;
+        background-color: $colorA;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 25px;
+        
+        // Logo
+        img {
+            width: 100px;
+            transition: 0.3s;
+        }
+        img:hover {
+            transform: scale(1.15);
+        }
+
+        // letras
+        ul {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            li {
+                transition: 0.3s;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    transition: .3s;
+                    font-size: 1.2rem;
+                }
+                a:hover {
+                    color: $colorC;
+                }
+            }
+            li:hover {
+                transform: scale(1.15);
+            }
+        }
+
+        // Carrito de compras
+        .carritoCampo {
+            position: relative;
+            width: 70px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            // Imagen del carrito
+            div {
+                cursor: pointer;
+                width: 50px;
+                height: 50px;
+                background-image: url(../assets/carrito.png);
+                background-size: cover;
+                transition: .3s;
+            }
+            div:hover {
+                background-image: url(../assets/carrito2.png);
+                transform: scale(1.1);
+            }
+
+            // Contador del carrito
+            p {
+                background-color: black;
+                color: $colorC;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                position: absolute;
+                right: 0;
+                bottom: 10;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    nav {
+        // Navegador
+        .navegador {
+            padding: 0 5px 0 5px;
+            height: 70px;
+
+            // Logo
+            img {
+                width: 80px;
+            }
+
+            //Letras
+            ul {
+                display: none;
+            }
+
+            // Carriro de compras
+            .carritoCampo {
+                div {
+                    width: 40px;
+                    height: 40px;
+                }
+                p {
+                    right: 5px;
+                }
+            }
+        }
+    }
+}
