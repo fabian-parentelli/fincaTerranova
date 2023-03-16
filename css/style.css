@@ -103,6 +103,39 @@ nav .navegador .itemsUl li a:hover {
 nav .navegador .itemsUl li:hover {
   transform: scale(1.15);
 }
+nav .navegador .itemsUl .productos {
+  position: relative;
+}
+nav .navegador .itemsUl .productos .arrow {
+  width: 15px;
+  margin: 0 0 -2px 6px;
+  transform: rotate(-90deg);
+}
+nav .navegador .itemsUl .productos .productoModal {
+  position: absolute;
+  background-color: #654b30;
+  border-radius: 0 0 6px 6px;
+  width: 200px;
+  height: 20vh;
+  top: 60px;
+  right: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: 0.5s ease-in-out;
+  text-align: center;
+}
+nav .navegador .itemsUl .productos:hover {
+  transform: none;
+}
+nav .navegador .itemsUl .productos:hover .arrow {
+  transform: rotate(0);
+}
+nav .navegador .itemsUl .productos:hover .productoModal {
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
 nav .navegador .carritoCampo {
   position: relative;
   width: 70px;
@@ -155,13 +188,13 @@ nav .navegador .carritoCampo p {
     background-color: #fbb344;
     border-radius: 0 0 1rem 0;
     width: 40%;
-    height: 30vh;
+    height: 40vh;
     top: 70px;
     left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: 0.5s ease-in-out;
   }
@@ -177,6 +210,43 @@ nav .navegador .carritoCampo p {
   }
   nav .navegador .menuHamb .menuShow li a:hover {
     color: #342c2c;
+  }
+  nav .navegador .menuHamb .menuShow .productos {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+  nav .navegador .menuHamb .menuShow .productos .arrow {
+    width: 20px;
+    margin: 0 0 -2px 6px;
+    transform: rotate(-90deg);
+  }
+  nav .navegador .menuHamb .menuShow .productos .productoModal {
+    position: absolute;
+    background-color: #654b30;
+    border-radius: 0 0 1em 0;
+    width: 100%;
+    height: 23vh;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.5s ease-in-out;
+    text-align: center;
+  }
+  nav .navegador .menuHamb .menuShow .productos .productoModal a {
+    color: white;
+  }
+  nav .navegador .menuHamb .menuShow .productos .productoModal a.hover {
+    color: #342c2c;
+  }
+  nav .navegador .menuHamb .menuShow .productos .arrowOn {
+    transform: rotate(0);
+  }
+  nav .navegador .menuHamb .menuShow .productos .productosModalOn {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   nav .navegador .menuHamb .menuShowOn {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -198,8 +268,143 @@ nav .navegador .carritoCampo p {
 }
 header {
   width: 100%;
-  height: 200vh;
+  height: 50vh;
   background-color: #cccccc;
+}
+
+.formulario {
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formulario h3 {
+  color: #fbb344;
+  font-size: 4rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 800;
+  margin: 1rem 0;
+  text-align: center;
+}
+.formulario .formularioContainer {
+  width: 80%;
+  height: 100%;
+  border: 1px solid #342c2c;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.formulario .formularioContainer .contactoContainer {
+  width: 50%;
+  min-height: 400px;
+  gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.formulario .formularioContainer .contactoContainer div {
+  gap: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.formulario .formularioContainer .contactoContainer div img {
+  width: 30px;
+}
+.formulario .formularioContainer .contactoContainer div p {
+  font-weight: 600;
+}
+.formulario .formularioContainer .contactoContainer div ul {
+  list-style: none;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+.formulario .formularioContainer .separadorLinea {
+  display: none;
+}
+.formulario .formularioContainer form {
+  width: 50%;
+  min-height: 400PX;
+  gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.formulario .formularioContainer form input {
+  width: 100%;
+  border: 1px solid #342c2c;
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.formulario .formularioContainer form input:hover {
+  box-shadow: -1px 1px 14px 0px rgba(251, 179, 68, 0.75);
+  -webkit-box-shadow: -1px 1px 14px 0px rgba(251, 179, 68, 0.75);
+  -moz-box-shadow: -1px 1px 14px 0px rgba(251, 179, 68, 0.75);
+}
+.formulario .formularioContainer form textarea {
+  width: 100%;
+  resize: none;
+  border: 1px solid #342c2c;
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.formulario .formularioContainer form textarea:hover {
+  box-shadow: -1px 1px 14px 0px rgba(251, 179, 68, 0.75);
+  -webkit-box-shadow: -1px 1px 14px 0px rgba(251, 179, 68, 0.75);
+  -moz-box-shadow: -1px 1px 14px 0px rgba(251, 179, 68, 0.75);
+}
+.formulario .formularioContainer form button {
+  color: #342c2c;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: 10rem;
+  background-color: #fbb344;
+  border: solid 2px #fbb344;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.formulario .formularioContainer form button:hover {
+  background-color: white;
+}
+
+@media screen and (max-width: 540px) {
+  .formulario h3 {
+    font-size: 3rem;
+  }
+  .formulario .formularioContainer {
+    width: 90%;
+  }
+  .formulario .formularioContainer .contactoContainer {
+    width: 100%;
+    min-height: 200px;
+    gap: 0;
+  }
+  .formulario .formularioContainer .contactoContainer div ul {
+    margin-top: 0;
+  }
+  .formulario .formularioContainer .separadorLinea {
+    display: block;
+    width: 90%;
+    height: 5px;
+    background-color: #342c2c;
+    margin: 2rem 0;
+    border-radius: 6px;
+  }
+  .formulario .formularioContainer form {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -22,6 +22,7 @@
 </head>
 
 <body>
+    <!-- ****** ****** Nav ***** ***** -->
     <nav>
         <!-- Redes Sociales -->
         <section class="navRedes">
@@ -41,7 +42,17 @@
                 <img class="hamburguesa" src="assets/menu.png" alt="menu">
                 <ul class="menuShow">
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
+
+                    <!-- Productos con desplegables -->
+                    <li class="productos">
+                        <a href="#" id="productosNav">Productos<img id="arrow" class="arrow" src="/assets/arrowBro.png" alt="arrow"></a>
+                       
+                        <div class="productoModal" id="productoModal">
+                            <a href="pages/miel.html">Miel</a>
+                            <a href="pages/aceite.html">Aceite de Oliva</a>
+                        </div>
+                    </li>
+
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
@@ -53,7 +64,17 @@
             <!-- items -->
             <ul class="itemsUl">
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
+
+                <!-- Productos con desplegables -->
+                <li class="productos">
+                    <a href="#">Productos <img class="arrow" src="assets/arrow.png" alt="arrow"></a>
+                    
+                    <div class="productoModal">
+                        <a href="pages/miel.html">Miel</a>
+                        <a href="pages/aceite.html">Aceite de Oliva</a>
+                    </div>
+                </li>
+
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
@@ -68,7 +89,59 @@
 
     <!-- Header vacio -->
     <header>
+        <div></div>
+    </header>
 
+    <!-- Main -->
+    <main>
+
+
+
+        <!-- ****** formulario ****** -->
+        <section class="formulario">
+            
+            <h3>Contacta con nosotros</h3>
+
+            <div class="formularioContainer">
+
+                <!-- contactos -->
+                <div class="contactoContainer">
+                    <div>
+                        <img src="assets/email.png" alt="email">
+                        <p>ventas@fincaTerranova.com</p>
+                    </div>
+                    <div>
+                        <img src="assets/posicion.png" alt="email">
+                        <p>San Justo - BsAs - Argentina</p>
+                    </div>
+                    <div>
+                        <img src="assets/telefono.png" alt="email">
+                        <ul>
+                            <li>+54 9 11 5880-6586</li>
+                            <li>+54 9 11 5880-6586</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="separadorLinea"></div>
+
+                <!-- Form -->
+                <form>
+                    <input required type="text" name="name" id="name" placeholder="Nombre completo">
+                    <input required type="text" name="email" id="email" placeholder="email@email.com">
+                    <textarea required name="message" id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- Header vacio -->
+    <header>
+        <div></div>
     </header>
 
     <!-- Script de JavaScript -->

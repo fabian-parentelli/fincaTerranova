@@ -8,6 +8,17 @@ export function menuOpenClosed() {
             menuShow.classList.remove("menuShowOn");
         } else {
             menuShow.classList.add("menuShowOn");
-        }
+        };
+    });
+};
+
+export function menuOpenProductos() {
+    const btnProductos = document.querySelector("#productosNav");
+    const arrow = document.querySelector("#arrow");
+    const productoModal = document.querySelector("#productoModal");
+
+    btnProductos.addEventListener("click", ()=> {
+        arrow.classList.toggle("arrowOn");
+        productoModal.classList.toggle("productosModalOn");
     });
 };

@@ -1,9 +1,11 @@
 nav {
+
     // ****** Redes ****** //
     .navRedes {
         width: 100%;
         height: 30px;
         background-color: black;
+
         div {
             height: 100%;
             margin-left: 5px;
@@ -20,12 +22,13 @@ nav {
                 background-size: contain;
                 transition: .3s;
             }
+
             .navInstagrame:hover {
                 background-image: url(../assets/instagram2.png);
                 transform: scale(1.1);
             }
 
-            //Facebook
+            // Facebook
             .navFacebook {
                 width: 20px;
                 height: 20px;
@@ -33,6 +36,7 @@ nav {
                 background-size: contain;
                 transition: .3s;
             }
+
             .navFacebook:hover {
                 background-image: url(../assets/facebook2.png);
                 transform: scale(1.1);
@@ -46,6 +50,7 @@ nav {
                 background-size: contain;
                 transition: .3s;
             }
+
             .navYoutube:hover {
                 background-image: url(../assets/youtube2.png);
                 transform: scale(1.1);
@@ -59,6 +64,7 @@ nav {
                 background-size: contain;
                 transition: .3s;
             }
+
             .navTiktok:hover {
                 background-image: url(../assets/tiktok2.png);
                 transform: scale(1.1);
@@ -80,12 +86,13 @@ nav {
         .menuHamb {
             display: none;
         }
-        
+
         // Logo
         img {
             width: 100px;
             transition: 0.3s;
         }
+
         img:hover {
             transform: scale(1.15);
         }
@@ -96,20 +103,64 @@ nav {
             list-style: none;
             display: flex;
             justify-content: space-evenly;
+
             li {
                 transition: 0.3s;
+
                 a {
                     text-decoration: none;
                     color: white;
                     transition: .3s;
                     font-size: 1.2rem;
                 }
+
                 a:hover {
                     color: $colorC;
                 }
             }
+
             li:hover {
                 transform: scale(1.15);
+            }
+
+            // Modal productos
+            .productos {
+                position: relative;
+
+                .arrow {
+                    width: 15px;
+                    margin: 0 0 -2px 6px;
+                    transform: rotate(-90deg);
+                }
+
+                .productoModal {
+                    position: absolute;
+                    background-color: $colorB;
+                    border-radius: 0 0 6px 6px;
+                    width: 200px;
+                    height: 20vh;
+                    top: 60px;
+                    right: -50px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                    transition: .5s ease-in-out;
+                    text-align: center;
+                }
+            }
+
+            .productos:hover {
+                transform: none;
+
+                .arrow {
+                    transform: rotate(0);
+                }
+
+                .productoModal {
+                    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+                }
             }
         }
 
@@ -121,7 +172,7 @@ nav {
             display: flex;
             align-items: center;
             justify-content: center;
-            
+
             // Imagen del carrito
             div {
                 cursor: pointer;
@@ -131,6 +182,7 @@ nav {
                 background-size: cover;
                 transition: .3s;
             }
+
             div:hover {
                 background-image: url(../assets/carrito2.png);
                 transform: scale(1.1);
@@ -158,6 +210,7 @@ nav {
 
 @media screen and (max-width: 540px) {
     nav {
+
         // Navegador
         .navegador {
             padding: 0 5px 0 5px;
@@ -180,17 +233,19 @@ nav {
                     background-color: $colorC;
                     border-radius: 0 0 1rem 0;
                     width: 40%;
-                    height: 30vh;
+                    height: 40vh;
                     top: 70px;
                     left: 0;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: space-around;
                     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
                     transition: .5s ease-in-out;
+
                     li {
                         list-style: none;
+
                         a {
                             text-decoration: none;
                             color: black;
@@ -198,11 +253,59 @@ nav {
                             font-weight: 600;
                             transition: .3s;
                         }
+
                         a:hover {
                             color: $colorA;
                         }
                     }
+
+                    // Modal productos
+                    .productos {
+                        position: relative;
+                        width: 100%;
+                        text-align: center;
+
+                        .arrow {
+                            width: 20px;
+                            margin: 0 0 -2px 6px;
+                            transform: rotate(-90deg);
+                        }
+
+                        .productoModal {
+                            position: absolute;
+                            background-color: $colorB;
+                            border-radius: 0 0 1em 0;
+                            width: 100%;
+                            height: 23vh;
+                            top: 30px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                            transition: .5s ease-in-out;
+                            text-align: center;
+
+                            a {
+                                color: white;
+                            }
+
+                            a.hover {
+                                color: $colorA;
+                            }
+                        }
+
+                        // apertura de productos
+                        .arrowOn {
+                            transform: rotate(0);
+                        }
+
+                        .productosModalOn {
+                            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                        }
+                    }
                 }
+
                 // Apertura del Modal hamburguesa.
                 .menuShowOn {
                     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -226,6 +329,7 @@ nav {
                     width: 30px;
                     height: 30px;
                 }
+
                 p {
                     right: 5px;
                 }

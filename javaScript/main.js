@@ -1,3 +1,4 @@
-import { menuOpenClosed } from "./menuHamb.js";
+import { menuOpenClosed, menuOpenProductos} from "./menuHamb.js";
 
 menuOpenClosed();
+menuOpenProductos()
