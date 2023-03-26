@@ -272,6 +272,103 @@ header {
   background-color: #cccccc;
 }
 
+.curiosidades .curiosidadesMiel {
+  margin-top: 6rem;
+}
+.curiosidades .curiosidadesMiel h3 {
+  color: #fbb344;
+  font-size: 4rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 800;
+  margin: 1rem 0;
+  text-align: center;
+}
+.curiosidades .curiosidadesMiel .containerCards {
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  row-gap: 2rem;
+}
+.curiosidades .curiosidadesMiel .containerCards .card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+.curiosidades .curiosidadesMiel .containerCards .card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.curiosidades .curiosidadesMiel .containerCards .card .face h3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  top: 70px;
+  color: white;
+  font-size: 1.6rem;
+}
+.curiosidades .curiosidadesMiel .containerCards .card .face img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+.curiosidades .curiosidadesMiel .containerCards .card .front {
+  transform: perspective(600p) rotateY(0deg);
+  box-shadow: 0 5px 10px #342c2c;
+}
+.curiosidades .curiosidadesMiel .containerCards .card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background-color: #fbb344;
+  padding: 15px;
+  color: #342c2c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  box-shadow: 0 5px 10px #342c2c;
+}
+.curiosidades .curiosidadesMiel .containerCards .card .back p {
+  font-weight: 500;
+}
+.curiosidades .curiosidadesMiel .containerCards .card .back .separador {
+  border-top: solid 1px #342c2c;
+  height: 50px;
+  line-height: 50px;
+}
+.curiosidades .curiosidadesMiel .containerCards .card .back a {
+  font-weight: #342c2c;
+  color: #342c2c;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.curiosidades .curiosidadesMiel .containerCards .card .back a:hover {
+  color: white;
+}
+.curiosidades .curiosidadesMiel .containerCards .card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+.curiosidades .curiosidadesMiel .containerCards .card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+
+@media screen and (max-width: 540px) {
+  .curiosidades .curiosidadesMiel h3 {
+    font-size: 3rem;
+  }
+  .curiosidades .curiosidadesMiel .containerCards {
+    margin-top: 2rem;
+  }
+}
 .formulario {
   margin: 1rem 0;
   width: 100%;
@@ -404,6 +501,162 @@ header {
   }
   .formulario .formularioContainer form {
     width: 100%;
+  }
+}
+footer {
+  width: 100%;
+  height: 100%;
+  background-color: #342c2c;
+}
+footer .footerA {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 0 45px;
+}
+footer .footerA .footerDivA {
+  width: 100%;
+  margin-top: 2rem;
+}
+footer .footerA .footerDivA h3 {
+  color: white;
+  text-decoration: none;
+}
+footer .footerA .footerDivA p {
+  margin-top: 1rem;
+  color: grey;
+}
+footer .footerA .footerDivB {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+footer .footerA .footerDivB div a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+footer .footerA .footerDivB div a:hover {
+  color: #fbb344;
+}
+footer .footerA .footerDivB div p {
+  margin-top: 1rem;
+  color: grey;
+}
+footer .footerB {
+  width: 100%;
+  padding: 0 15px 0 45px;
+  margin-top: 2rem;
+}
+footer .footerB .footerBDivA {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footerB .footerBDivA .footerFacebook {
+  background-image: url(../assets/facebookgray.png);
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+footer .footerB .footerBDivA .footerFacebook:hover {
+  background-image: url(../assets/facebookgray1.png);
+}
+footer .footerB .footerBDivA .footerInstagram {
+  background-image: url(../assets/instagramgray.png);
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+footer .footerB .footerBDivA .footerInstagram:hover {
+  background-image: url(../assets/instagramgray1.png);
+}
+footer .footerB .footerBDivA .footerYoutube {
+  background-image: url(../assets/youtubegray.png);
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+footer .footerB .footerBDivA .footerYoutube:hover {
+  background-image: url(../assets/youtubegray1.png);
+}
+footer .footerB .footerBDivA .footerTiktok {
+  background-image: url(../assets/tiktokgray.png);
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+footer .footerB .footerBDivA .footerTiktok:hover {
+  background-image: url(../assets/tiktokgray1.png);
+}
+footer .footerB .footerBDivB {
+  margin-top: 2rem;
+}
+footer .footerB .footerBDivB p {
+  color: gray;
+}
+footer .desarrolladores {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  background-color: black;
+  align-items: center;
+}
+footer .desarrolladores h3 {
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+}
+footer .desarrolladores p {
+  color: gray;
+}
+footer .desarrolladores .separaA {
+  width: 2px;
+  height: 20px;
+  border-left: solid 2px gray;
+}
+
+@media screen and (max-width: 540px) {
+  footer {
+    text-align: center;
+  }
+  footer .footerA {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  footer .footerA .footerDivB {
+    flex-direction: column;
+  }
+  footer .footerA .footerDivB div {
+    margin-bottom: 1rem;
+  }
+  footer .footerA .footerDivB div p {
+    margin: 0;
+  }
+  footer .footerB {
+    width: 100%;
+    padding: 0 15px;
+  }
+  footer .footerB .footerBDivA {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 769px) {
+  footer .desarrolladores {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+  footer .desarrolladores p {
+    margin-top: 1rem;
+  }
+  footer .desarrolladores .separaB {
+    width: 90%;
+    height: 2px;
+    border-top: solid 2px gray;
+    margin-top: 1rem;
   }
 }
 

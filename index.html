@@ -27,10 +27,18 @@
         <!-- Redes Sociales -->
         <section class="navRedes">
             <div>
-                <a href="https://www.instagram.com/fincaterranova/" target="_blank"><div class="navInstagrame"></div></a>
-                <a href="#"><div class="navFacebook"></div></a>
-                <a href="#"><div class="navYoutube"></div></a>
-                <a href="#"><div class="navTiktok"></div></a>
+                <a href="https://www.instagram.com/fincaterranova/" target="_blank">
+                    <div class="navInstagrame"></div>
+                </a>
+                <a href="#">
+                    <div class="navFacebook"></div>
+                </a>
+                <a href="#">
+                    <div class="navYoutube"></div>
+                </a>
+                <a href="#">
+                    <div class="navTiktok"></div>
+                </a>
             </div>
         </section>
 
@@ -45,11 +53,12 @@
 
                     <!-- Productos con desplegables -->
                     <li class="productos">
-                        <a href="#" id="productosNav">Productos<img id="arrow" class="arrow" src="assets/arrowBro.png" alt="arrow"></a>
-                       
+                        <a href="#" id="productosNav">Productos<img id="arrow" class="arrow" src="assets/arrowBro.png"
+                                alt="arrow"></a>
+
                         <div class="productoModal" id="productoModal">
-                            <a href="pages/miel.html">Miel</a>
-                            <a href="pages/aceite.html">Aceite de Oliva</a>
+                            <a href="pages/second.html">Miel</a>
+                            <a href="pages/second.html">Aceite de Oliva</a>
                         </div>
                     </li>
 
@@ -68,17 +77,17 @@
                 <!-- Productos con desplegables -->
                 <li class="productos">
                     <a href="#">Productos <img class="arrow" src="assets/arrow.png" alt="arrow"></a>
-                    
+
                     <div class="productoModal">
-                        <a href="pages/miel.html">Miel</a>
-                        <a href="pages/aceite.html">Aceite de Oliva</a>
+                        <a href="pages/second.html">Miel</a>
+                        <a href="pages/second.html">Aceite de Oliva</a>
                     </div>
                 </li>
 
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
-             
+
             <!-- Carrito de compras -->
             <div class="carritoCampo">
                 <div></div>
@@ -96,10 +105,27 @@
     <main>
 
 
+        <!-- ****** Curiosidades ******  -->
+        <section class="curiosidades">
+
+            <!-- Miel -->
+            <section class="curiosidadesMiel">
+                <h3>Curiosidaes de la Miel</h3>
+                <div class="containerCards" id="contMiel"></div>
+            </section>
+
+            <!-- *** Aceite de Oliva *** -->
+            <section class="curiosidadesMiel">
+                <h3>Curiosidaes del Aceite de Oliva</h3>
+                <div class="containerCards" id="contAceite"></div>
+            </section>
+        </section>
+
 
         <!-- ****** formulario ****** -->
+
         <section class="formulario">
-            
+
             <h3>Contacta con nosotros</h3>
 
             <div class="formularioContainer">
@@ -126,16 +152,18 @@
                 <div class="separadorLinea"></div>
 
                 <!-- Form -->
-                <form>
+                <form id="formulario" action="https://formsubmit.co/f54603b9dae6566c36c8d5485ca3d65d" method="POST">
                     <input required type="text" name="name" id="name" placeholder="Nombre completo">
                     <input required type="text" name="email" id="email" placeholder="email@email.com">
+                    <input required type="text" name="asunto" id="asunto" placeholder="Asunto">
                     <textarea required name="message" id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
                     <button type="submit">Enviar mensaje</button>
+                    <!-- Reiniciamos Página pagina, Quita el captcha -->
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+                    <input type="hidden" name="_captcha" value="false">
                 </form>
             </div>
         </section>
-
-
 
     </main>
 
@@ -144,7 +172,61 @@
         <div></div>
     </header>
 
+    <!--footer-->
+    <footer>
+        <section class="footerA">
+
+            <div class="footerDivA">
+                <h3>Finca Terranova</h3>
+                <p> Especilistas en productos naturales de la mas alta calidad desde 2019</p>
+            </div>
+
+            <div class="footerDivB">
+                <div>
+                    <a href="#">Marketplace</a>
+                    <p>Finca Terranova</p>
+                </div>
+                <div>
+                    <a href="#">Contacto Mayorista</a>
+                    <p>15-3126-7673</p>
+                </div>
+                <div>
+                    <a href="pages/miel.html">Destacado</a>
+                    <p>Blogs relacionados</p>
+                </div>
+            </div>
+        </section>
+
+        <!--SECCION 2-->
+        <section class="footerB">
+
+            <div class="footerBDivA">
+                <a class="footerFacebook" href="#" target="_blank"></a>
+                <a class="footerInstagram" href="https://www.instagram.com/fincaterranova/" target="_blank"></a>
+                <a class="footerYoutube" href="#" target="_blank"></a>
+                <a class="footerTiktok" href="#" target="_blank"></a>
+            </div>
+
+            <div class="footerBDivB">
+                <p>© Finca Terranova.Todos los derechos reservados.</p>
+            </div>
+        </section>
+
+        <!--Desarrolladores-->
+        <div class="desarrolladores">
+            <h3>Desarrolladores</h3>
+            <div class="separaA separaB"></div>
+            <p>Lucas Castro</p>
+            <p>lucasdavidcastro@gmail.com</p>
+            <div class="separaA separaB"></div>
+            <p>Fabian Parentelli</p>
+            <p>fabianparentelli007code@gmail.com</p>
+        </div>
+
+    </footer>
+
     <!-- Script de JavaScript -->
     <script src="javaScript/main.js" type="module"></script>
 </body>
+
 </html>

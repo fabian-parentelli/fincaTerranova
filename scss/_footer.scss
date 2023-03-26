@@ -1,0 +1,200 @@
+footer {
+    width: 100%;
+    height: 100%;
+    background-color: $colorA;
+
+    .footerA {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px 0 45px;
+
+        .footerDivA {
+            width: 100%;
+            margin-top: 2rem;
+
+            h3 {
+                color: white;
+                text-decoration: none;
+            }
+
+            p {
+                margin-top: 1rem;
+                color: grey;
+            }
+        }
+
+        .footerDivB {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+
+            div {
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: $colorC;
+                    }
+                }
+
+                p {
+                    margin-top: 1rem;
+                    color: grey;
+                }
+            }
+        }
+    }
+
+    .footerB {
+        width: 100%;
+        padding: 0 15px 0 45px;
+        margin-top: 2rem;
+
+        .footerBDivA {
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .footerFacebook {
+                background-image: url(../assets/facebookgray.png);
+                width: 32px;
+                height: 32px;
+                transition: .3s;
+
+                &:hover {
+                    background-image: url(../assets/facebookgray1.png);
+                }
+            }
+
+            .footerInstagram {
+                background-image: url(../assets/instagramgray.png);
+                width: 32px;
+                height: 32px;
+                transition: .3s;
+
+                &:hover {
+                    background-image: url(../assets/instagramgray1.png);
+                }
+            }
+
+            .footerYoutube {
+                background-image: url(../assets/youtubegray.png);
+                width: 32px;
+                height: 32px;
+                transition: .3s;
+
+                &:hover {
+                    background-image: url(../assets/youtubegray1.png);
+                }
+            }
+
+            .footerTiktok {
+                background-image: url(../assets/tiktokgray.png);
+                width: 32px;
+                height: 32px;
+                transition: .3s;
+
+                &:hover {
+                    background-image: url(../assets/tiktokgray1.png);
+                }
+            }
+        }
+
+        .footerBDivB {
+            margin-top: 2rem;
+
+            p {
+                color: gray;
+            }
+        }
+    }
+
+    .desarrolladores {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+        background-color: black;
+        align-items: center;
+
+        h3 {
+            color: white;
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        p {
+            color: gray;
+        }
+
+        .separaA {
+            width: 2px;
+            height: 20px;
+            border-left: solid 2px gray;
+        }
+    }
+}
+
+// ****** ******* Cel ****** ****** //
+
+@media screen and (max-width: 540px) {
+
+    footer {
+        text-align: center;
+
+        .footerA {
+            flex-direction: column;
+            padding: 0 15px;
+
+            .footerDivB {
+                flex-direction: column;
+
+                div {
+                    margin-bottom: 1rem;
+
+                    p {
+                        margin: 0;
+
+                    }
+                }
+            }
+        }
+
+        .footerB {
+            width: 100%;
+            padding: 0 15px;
+
+            .footerBDivA {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+
+    footer {
+
+        .desarrolladores {
+            flex-direction: column;
+            padding: 1rem 0;
+
+            p {
+                margin-top: 1rem;
+            }
+
+            .separaB {
+                width: 90%;
+                height: 2px;
+                border-top: solid 2px gray;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
