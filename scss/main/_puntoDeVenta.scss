@@ -1,0 +1,157 @@
+.puntoVenta {
+    width: 100%;
+    height: 100%;
+    margin-top: 4rem;
+
+    h3 {
+        width: 100%;
+        color: $colorA;
+        background-color: $colorC;
+        font-size: 4rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 800;
+        margin: 1rem 0 0 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .contPVenta {
+        width: 100%;
+        min-height: 300px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/photo/pVenta.jpg);
+        background-position: bottom; 
+        background-size: cover;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        img {
+            width: 200px;
+            transition: .3s;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .contFormPVentas {
+            width: 400px;
+
+            label {
+                text-align: center;
+                font-weight: 600;
+                color: white;
+                font-size: 2rem;
+            }
+
+            .formPVentas {
+                width: 300px;
+                
+                select {
+                    width: 100%;
+                    height: 36px;
+                    border-radius: 6px;
+                    border: 2px solid $colorA;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+
+    // Contenedor de tarjetas
+
+    .ContCardsPVenta {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        .cardPVenta {
+            width: 450px;
+            height: 200px;
+            margin-top: 1rem;
+            border: solid 2px $colorA;
+            border-radius: 1rem;
+            box-shadow: 0 5px 10px $colorA;
+            background-color: $colorA;
+            position: relative;
+            
+            iframe {
+                width: 100%;
+                height: 100%;
+                border-radius: 1rem;
+                position: absolute;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                top: 0;
+                transition: .5s ease-in-out;
+            }
+
+            div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+
+                h4 {
+                    font-size: 2rem;
+                    color: $colorC;
+                    text-align: center;
+                }
+
+                p {
+                    color: white;
+                    font-size: 1.4em;
+                }
+            }
+
+            &:hover iframe {
+                clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    .puntoVenta {
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        .contPVenta {
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+
+            img {
+                width: 100px;
+            }
+
+            .contFormPVentas {
+                width: 300px;
+                margin-top: 2rem;
+                padding: 1rem 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                label {
+                    width: 100%;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .ContCardsPVenta {
+            padding: 1rem;
+        }
+    }
+}

@@ -9,5 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Abre preoductos de menú hamburguesa
     menuOpenProductos();
 
+    // Imprime las Curiosidaes de la miel
     curiosidadesSecond();
 });
