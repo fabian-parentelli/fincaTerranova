@@ -819,10 +819,45 @@ header .banner p {
   text-align: center;
   width: 60%;
 }
+header .bannerAceite {
+  margin-top: 6em;
+  width: 100%;
+  height: 80vh;
+  background-image: url(../photo/headerMiel.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .bannerAceite h3 {
+  color: #342c2c;
+  font-size: 4rem;
+  text-align: center;
+  padding: 10px;
+}
+header .bannerAceite p {
+  color: white;
+  text-align: center;
+  width: 60%;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.596);
+  border-radius: 1rem;
+  padding: 1rem;
+}
 
 @media screen and (max-width: 540px) {
   header .banner h3 {
     font-size: 3rem;
+  }
+  header .bannerAceite h3 {
+    font-size: 2.5rem;
+  }
+  header .bannerAceite p {
+    width: 90%;
+    margin-top: 2rem;
   }
 }
 main .CuriosidadDecond {
