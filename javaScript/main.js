@@ -1,6 +1,7 @@
-import { menuOpenClosed, menuOpenProductos} from "./menuHamb.js";
+import { menuOpenClosed, menuOpenProductos } from "./menuHamb.js";
 import { curiosidadesDelAceite, curiosidadesDeLaMiel } from "./curiosidades/curiosidaes.js"
-import { clientesDefault } from "./puntosDeVenta.js/pVenta.js";
+import { puntosVenta } from "./puntosDeVenta.js/pVenta.js";
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -14,6 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     curiosidadesDeLaMiel();
     curiosidadesDelAceite();
 
-    // clienets
-    clientesDefault();
-})
+    // Puntos de Ventas
+    puntosVenta();
+});

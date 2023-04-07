@@ -5,10 +5,10 @@
 
     h3 {
         width: 100%;
-        color: $colorA;
-        background-color: $colorC;
-        font-size: 4rem;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: white;
+        background-color: $colorD;
+        font-size: 6rem;
+        font-family: $font;
         font-weight: 800;
         margin: 1rem 0 0 0;
         text-align: center;
@@ -123,7 +123,7 @@
     .puntoVenta {
 
         h3 {
-            font-size: 2rem;
+            font-size: 3rem;
         }
 
         .contPVenta {

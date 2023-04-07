@@ -5,9 +5,9 @@ main {
         margin: 4rem 0;
 
         h3 {
-            color: $colorA;
-            font-size: 6rem;
-            font-family: $font;
+            color: $colorC;
+            font-size: 4rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
             font-weight: 800;
             margin: 1rem 0;
             text-align: center;
@@ -32,8 +32,6 @@ main {
 
                     img {
                         width: 50%;
-                        border-radius: .6rem;
-                        box-shadow: 0 5px 10px $colorA;
                     }
 
                     .curiosoLargeInterno {
@@ -54,9 +52,7 @@ main {
                         }
 
                         .curiosoLargeB {
-                            margin-top: 1rem;
                             font-size: 1rem;
-                            
                         }
                     }
                 }

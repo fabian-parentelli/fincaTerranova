@@ -32,7 +32,7 @@ header {
         margin-top: 6em;
         width: 100%;
         height: 80vh;
-        background-image: url(../photo/headerMiel.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../photo/headerMiel.jpg);
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -43,7 +43,7 @@ header {
         justify-content: center;
 
         h3 {
-            color: $colorA;
+            color: white;
             font-size: 4rem;
             text-align: center;
             padding: 10px;
@@ -54,7 +54,7 @@ header {
             text-align: center;
             width: 60%;
             font-weight: 600;
-            background-color: rgba(0, 0, 0, 0.596);
+            background-color: rgba(0, 0, 0, 0.377);
             border-radius: 1rem;
             padding: 1rem;
         }

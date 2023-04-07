@@ -6,9 +6,9 @@
     align-items: center;
 
     h3 {
-        color: $colorC;
-        font-size: 4rem;
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        color: $colorA;
+        font-size: 6rem;
+        font-family: $font;
         font-weight: 800;
         margin: 1rem 0;
         text-align: center;
@@ -21,6 +21,7 @@
         border-radius: 1rem;
         padding: 1rem;
         margin-top: 2rem;
+        background-color: $colorB;
 
         display: flex;
         justify-content: space-around;
@@ -72,12 +73,13 @@
 
             input {
                 width: 100%;
-                border: 1px solid $colorA;
+                border: 2px solid $colorA;
                 border-radius: 6px;
                 padding: 6px;
                 font-size: 1rem;
                 font-weight: 500;
                 transition: .3s;
+                color: white;
             }
             input:hover {
                 box-shadow: -1px 1px 14px 0px rgba(251,179,68,0.75);
@@ -129,6 +131,7 @@
 
         .formularioContainer {
             width: 90%;
+            
 
             .contactoContainer {
                 width: 100%;

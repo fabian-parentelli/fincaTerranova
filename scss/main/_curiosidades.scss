@@ -5,11 +5,13 @@
 
         h3 {
             color: $colorC;
-            font-size: 4rem;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+            font-size: 6rem;
             font-weight: 800;
             margin: 1rem 0;
             text-align: center;
+            color: $colorA;
+            font-family: $font;
+            font-weight: 700;
         }
 
         .containerCards {
