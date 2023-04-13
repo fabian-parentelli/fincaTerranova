@@ -1,6 +1,7 @@
 import { menuOpenClosed, menuOpenProductos } from "./menuHamb.js";
 import { curiosidadesDelAceite, curiosidadesDeLaMiel } from "./curiosidades/curiosidaes.js"
 import { puntosVenta } from "./puntosDeVenta.js/pVenta.js";
+import { recetasIndex } from "./recetas/recetas.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,4 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Puntos de Ventas
     puntosVenta();
+
+    // recetas.
+    recetasIndex();
 });

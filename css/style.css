@@ -6,10 +6,6 @@
   font-family: "Mukta", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background-color: rgb(218, 182, 141);
 }
@@ -642,6 +638,114 @@ header {
   }
   .puntoVenta .ContCardsPVenta {
     padding: 1rem;
+  }
+}
+.recetasContainer {
+  min-height: 90vh;
+  margin-top: 4rem;
+  position: relative;
+}
+.recetasContainer h3 {
+  color: #fbb344;
+  font-size: 6rem;
+  font-weight: 800;
+  text-align: center;
+  color: #342c2c;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+}
+.recetasContainer #nameRecipe {
+  width: 100%;
+  transition: 0.6s;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.recetasContainer #nameRecipe .nameTitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.recetasContainer .nameRecipeModal {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+}
+.recetasContainer .recetas {
+  min-height: 83vh;
+  display: grid;
+  place-content: center;
+  background: rgb(218, 182, 141);
+}
+.recetasContainer .gallery {
+  --s: 130px;
+  /* control the size of the images*/
+  display: grid;
+  gap: 5px;
+  position: relative;
+}
+.recetasContainer .gallery input {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  inset: calc(50% - var(--s) / 3);
+  cursor: pointer;
+  --g: linear-gradient(#fff 0 0) no-repeat;
+  background: var(--g) 50%/60% 3px, var(--g) 50%/3px 60%, #b64b3d;
+  background-image: url(../assets/cocinero.png);
+  background-size: 40px;
+  transition: 1.5s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.recetasContainer .gallery > img {
+  width: var(--s);
+  aspect-ratio: 1;
+  grid-area: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: scale(0.5);
+  transition: 1s calc((var(--i) - 1) * 0.1s);
+}
+.recetasContainer .gallery > img:nth-of-type(1) {
+  --i: 1;
+}
+.recetasContainer .gallery > img:nth-of-type(2) {
+  --i: 2;
+}
+.recetasContainer .gallery > img:nth-of-type(3) {
+  --i: 3;
+}
+.recetasContainer .gallery > img:nth-of-type(4) {
+  --i: 4;
+}
+.recetasContainer .gallery > img:nth-of-type(5) {
+  --i: 5;
+}
+.recetasContainer .gallery > img:nth-of-type(6) {
+  --i: 6;
+}
+.recetasContainer .gallery > img:nth-of-type(7) {
+  --i: 7;
+}
+.recetasContainer .gallery > img:nth-of-type(8) {
+  --i: 8;
+}
+.recetasContainer .gallery > img:nth-of-type(9) {
+  --i: 9;
+}
+.recetasContainer .gallery > input:checked ~ img {
+  transform: rotate(calc(var(--i) * 360deg / 8)) translate(calc(1.5 * var(--s))) rotate(calc(var(--i) * -360deg / 8));
+}
+.recetasContainer .gallery > input:checked {
+  transform: rotate(260deg);
+}
+
+@media screen and (max-width: 540px) {
+  .recetasContainer .gallery {
+    --s: 80px;
+  }
+  .recetasContainer .recetas {
+    display: grid;
+    place-content: center;
+    min-height: 60vh;
   }
 }
 footer {
