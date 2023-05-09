@@ -46,6 +46,10 @@ function mostrarTitle(title, id) {
     title.onmouseout = () => {
         nameRecipe.classList.remove('nameRecipeModal');
     };
+
+    title.addEventListener('click', () => {
+        window.location.href = `pages/second.html#${id}`;
+    });
 };
 
 function buscarTitle(id) {
@@ -67,4 +71,35 @@ function limpiarHTML() {
     while (nameRecipe.firstChild) {
         nameRecipe.removeChild(nameRecipe.firstChild);
     };
+};
+
+// Second page
+
+export function recipes() {
+
+    const contHoney = document.querySelector('#contRecipesHoney');
+    const contOil = document.querySelector('#contRecipesOil');
+
+    recetas.forEach((recipes) => {
+
+        const { id, name, family, ingredients, elaboration, url } = recipes;
+
+        const div = document.createElement('div');
+        div.innerHTML = `
+            <div class="cardRecipes" id=${id}>
+                <img src=${url} alt=${name}>
+                <div>
+                    <h4>${name}</h4>
+                    <p class="ingredient">${ingredients}</p>
+                    <p>${elaboration}</p>
+                </div>
+            </div>
+        `;
+        if(family === 'honey') {
+            contHoney.appendChild(div);
+        }
+        if(family === 'oil') {
+            contOil.appendChild(div);
+        };
+    });
 };

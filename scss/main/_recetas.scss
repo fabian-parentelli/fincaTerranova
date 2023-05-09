@@ -1,5 +1,5 @@
 .recetasContainer {
-    min-height: 90vh;
+    min-height: 100vh;
     margin-top: 4rem;
     position: relative;
 
@@ -37,7 +37,7 @@
     }
 
     .gallery {
-        --s: 130px;
+        --s: 120px;
         /* control the size of the images*/
         display: grid;
         gap: 5px;

@@ -1,5 +1,6 @@
 import { menuOpenClosed, menuOpenProductos} from "./menuHamb.js";
 import { curiosidadesSecond } from "./curiosidades/curiosidaes.js"
+import { recipes } from "./recetas/recetas.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -11,4 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Imprime las Curiosidaes de la miel
     curiosidadesSecond();
+
+    recipes();
 });
