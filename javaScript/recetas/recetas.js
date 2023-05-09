@@ -87,7 +87,7 @@ export function recipes() {
         const div = document.createElement('div');
         div.innerHTML = `
             <div class="cardRecipes" id=${id}>
-                <img src=${url} alt=${name}>
+                <img src="../${url}" alt=${name}>
                 <div>
                     <h4>${name}</h4>
                     <p class="ingredient">${ingredients}</p>
